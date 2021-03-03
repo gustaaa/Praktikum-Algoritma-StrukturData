@@ -40,5 +40,24 @@ sgArray ke-3 alas: 25, tinggi: 10
 
 <img src = "./gambar/empat5.jpeg">
  
+## Output Program
+1. Output Bangun Ruang
 
+<img src = "./gambar/1 (1).jpeg">
+
+2. Output Luas Tanah
+
+<img src = "./gambar/1 (2).jpeg">
+
+3. Output Tanah Terluas
+
+<img src = "./gambar/1 (3).jpeg">
+
+4. Output Data Mahasiswa
+
+<img src = "./gambar/1 (4).jpeg">
+
+5. Output Rata-rata IPK
+
+<img src = "./gambar/1 (5).jpeg">
 
