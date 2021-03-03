@@ -36,7 +36,7 @@ sgArray ke-1 alas: 20, tinggi: 10
 sgArray ke-2 alas: 15, tinggi: 6
 sgArray ke-3 alas: 25, tinggi: 10
  <img src = "./gambar/empat4.jpeg">
-5.  hitungLuas() dan hitungKeliling() pada class Segitiga tersebut.
+5.  Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil methodhitungLuas() dan hitungKeliling() pada class Segitiga tersebut.
 
 <img src = "./gambar/empat5.jpeg">
  
