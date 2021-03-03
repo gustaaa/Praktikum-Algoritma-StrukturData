@@ -38,7 +38,7 @@ sgArray ke-3 alas: 25, tinggi: 10
  <img src = "./gambar/empat4.jpeg">
 5.  hitungLuas() dan hitungKeliling() pada class Segitiga tersebut.
 
-    <img src = "./gambar/empat5.jpeg">
+<img src = "./gambar/empat5.jpeg">
  
 
 
