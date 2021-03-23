@@ -61,9 +61,15 @@ public class DaftarMahasiswaBerprestasi {
                 j--;
             }*/
             if(asc){
-                
+              while (j > 0 && listMhs[j-1].ipk > temp.ipk){
+                listMhs[j] = listMhs[j-1];
+                j--;
+              }  
             }else{
-                
+              while (j > 0 && listMhs[j-1].ipk > temp.ipk){
+                listMhs[j] = listMhs[j-1];
+                j--;
+            }  
             }
             listMhs[j] = temp;
         }

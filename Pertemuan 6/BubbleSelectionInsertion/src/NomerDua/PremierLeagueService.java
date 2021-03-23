@@ -26,7 +26,7 @@ void tampilAll(){
         System.out.println("-----------------------------------");
     }
 }
-void insertionSortAsc(){
+/*void insertionSortAsc(){
     for(int i = 1; i<leagues.length; i++){
         PremierLeague temp = leagues[i];
         int j = i;
@@ -47,5 +47,23 @@ void insertionSortDesc(){
         }
         leagues[j] = temp;
     }
-}
+}*/
+void insertionSort(boolean asc){
+    for(int i = 1;i < leagues.length; i++){
+        PremierLeague temp = leagues[i];
+        int j = i;
+        if(asc){
+            while (j > 0 && leagues[j-1].points < temp.points){
+            leagues[j] = leagues[j-1];
+            j--;
+            }        
+        }else{
+            while (j > 0 && leagues[j-1].points < temp.points){
+            leagues[j] = leagues[j-1];
+            j--;
+            }
+        }
+        leagues[j] = temp;
+        }
+    }
 }

@@ -69,12 +69,12 @@ public class MainLeague {
         
         System.out.println("\n_____________________________________");
         System.out.println("| Proses Sorting Secara Ascending | \n");
-        list.insertionSortAsc();
+        list.insertionSort(true);
         list.tampilAll();
         
         System.out.println("\n_____________________________________");
         System.out.println("| Proses Sorting Secara Descending | \n");
-        list.insertionSortDesc();
+        list.insertionSort(false);
         list.tampilAll();
     }
 }
