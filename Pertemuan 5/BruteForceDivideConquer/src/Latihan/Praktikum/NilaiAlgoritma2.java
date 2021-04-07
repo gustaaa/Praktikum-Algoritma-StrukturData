@@ -17,7 +17,7 @@ public class NilaiAlgoritma2 {
     public int nilaiUAS;
     public double total;
     public double rata[];
-    public double avg;
+    double avg = 0;
     
     NilaiAlgoritma2(){
         
