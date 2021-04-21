@@ -27,7 +27,8 @@ Kegunaan dari potongan kode tersebut adalah menunjukkan bahwa queue belum penuh 
 - <img src = "./Gambar/8.2.3.5.png">
 - Jawab:
 Ketika front dari queue berada dindeks terakhir array maka pengambilan data akan dilakukan pada indeks terakhir sehingga front akan bergeser ke indeks ke 0.
-6.	Pada method print, mengapa pada proses perulangan variabel i tidak dimulai dari 0 (int i=0), melainkan int i=front?
+
+6. Pada method print, mengapa pada proses perulangan variabel i tidak dimulai dari 0 (int i=0), melainkan int i=front?
 
 - Jawab:
 Karena untuk menampilkan antrian yang akan ditampilkan menggunakan loop pada data yang sudah ditambahkan dan masih berada didalam queue yang belum terambil, sehingga i = front. Apabila i = 0 maka akan ada data yang kosong pada saat dilakukan penampilan menggunakan loop karena loop tidak bisa mengetahui data mana yang sudah terambil atau data yang masih kosong.
