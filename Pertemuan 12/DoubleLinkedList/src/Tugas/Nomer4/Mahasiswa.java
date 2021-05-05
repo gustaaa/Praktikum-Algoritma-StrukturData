@@ -113,7 +113,7 @@ public class Mahasiswa {
         if (!isEmpty()){
             Node tmp = head;
             System.out.println("*****************************");
-            System.out.println("\t\tCETAK DATA");
+            System.out.println("\tCETAK DATA");
             System.out.println("*****************************");
             System.out.println("|No. \t|Nama \t|IPK \t|");
             while(tmp!=null){  
@@ -176,22 +176,49 @@ public class Mahasiswa {
             size--;
         }
     }
-    public void sort(){
-        Node i = pointer;
-        while(i != null){
-            Node j = i.next;
-            while(j != null){
-                if( i.ipk < j.ipk){
-                    Object tmp = i.dt;
-                    i.dt = j.dt;
-                    j.dt = tmp;
-                    double tem = i.ipk;
-                    i.ipk = j.ipk;
-                    j.ipk = tem;
-                }
-                j = j.next;
-            }
-            i = i.next;
+    public void search(String nim)throws Exception{
+        int i=0;
+        boolean flag=false;
+        Node current=head;
+        if(head==null){
+            System.out.println("List masih kosong!");
+            return;
         }
+        while(current!=null){
+            if(current.nim.equalsIgnoreCase(nim)){
+                flag=true;
+                break;
+            }
+            current=current.next;
+            i++;
+        }
+        if(flag){
+            System.out.println("Data "+nim+" berada di node ke-"+i);
+            System.out.println("*****************************");
+            System.out.println("\tCETAK DATA");
+            System.out.println("*****************************");
+            System.out.println("|No. \t|Nama \t|IPK \t|");
+            System.out.println("|"+current.nim+" \t|"+current.nama+" \t|"+current.ipk+" \t|");
+        } else{
+            System.out.println("Data tidak ditemukan!");
+        }
+    }
+    public void sort()throws Exception{
+        Node current=null, idx=null;
+        double tmp;
+        if(head==null){
+            return;
+        } else{
+            for(current=head; current.next!=null; current=current.next){
+                for(idx=current.next; idx!=null; idx=idx.next){
+                    if(current.ipk<idx.ipk){
+                        tmp=current.ipk;
+                        current.ipk=idx.ipk;
+                        idx.ipk=tmp;
+                    }
+                }
+            }
+        }
+        print();
     }
 }

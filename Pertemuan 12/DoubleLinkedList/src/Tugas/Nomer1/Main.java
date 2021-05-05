@@ -79,7 +79,10 @@ public class Main {
                     break;
                 }
                 case 8:{
-                
+                    System.out.println("Cari Data");
+                    System.out.print("Masukkan data yang ingin dicari : ");
+                    int n = sc.nextInt();
+                    dll.search(n);
                     break;    
                 }
                 case 9:{

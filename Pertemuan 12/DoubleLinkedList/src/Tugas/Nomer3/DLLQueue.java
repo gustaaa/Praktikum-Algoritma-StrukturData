@@ -40,16 +40,28 @@ public class DLLQueue {
             System.out.println("Linked List kosong!");
         }
     }
-    public void Enqueue(String no, String nama){
-        Node nsbh=new Node(null,null,no,nama);
-        if(isEmpty()){
-            front=nsbh;
-            rear=nsbh;
-        } else{
-            nsbh.next=front;
-            front=nsbh;
+    public void addFirst(String no, String nama){
+        if (isEmpty()){
+            front = new Node (null, null, no,nama);
+        }else{
+            Node newNode = new Node(null, front, no,nama);
+            front.prev = newNode;
+            front = newNode;
         }
         size++;
+    }
+    public void Enqueue(String no, String nama){
+        if (isEmpty()){
+            addFirst(no, nama);
+        }else {
+            Node current = front;
+            while (current.next != null){
+                current = current.next;
+            }
+            Node newNode = new Node(current, null,no,nama);
+            current.next = newNode;
+            size++;
+        }
     }
     public void Dequeue(){
         if(isEmpty()){
@@ -62,7 +74,7 @@ public class DLLQueue {
         size--;
     }
     public void getDataFront(){
-        Node tmp=rear;
+        Node tmp=front;
         System.out.println(tmp.nama+" telah selesai divaksinasi");
     }
 }

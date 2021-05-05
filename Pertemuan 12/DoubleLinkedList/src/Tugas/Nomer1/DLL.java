@@ -141,22 +141,44 @@ public class DLL {
             size--;
         }
     }
-    public void sort(){
-        Node i = null;
-        while(i != null){
-            Node j = i.next;
-            while(j != null){
-                if( i.data < j.data){
-                    Object tmp = i.data;
-                    i.data = j.data;
-                    j.data = (int) tmp;
-                    Object temp = i.data;
-                    i.data = j.data;
-                    j.data = (int)temp;
-                }
-                j = j.next;
-            }
-            i = i.next;
+    public void search(int nilai)throws Exception{
+        int i=0;
+        boolean flag=false;
+        Node current=head;
+        if(head==null){
+            System.out.println("List masih kosong!");
+            return;
         }
+        while(current!=null){
+            if(current.data==nilai){
+                flag=true;
+                break;
+            }
+            current=current.next;
+            i++;
+        }
+        if(flag){
+            System.out.println("Data "+nilai+" berada di node ke-"+i);
+        } else{
+            System.out.println("Data tidak ditemukan!");
+        }
+    }
+    public void sort()throws Exception{
+        Node current=null, idx=null;
+        int tmp;
+        if(head==null){
+            return;
+        } else{
+            for(current=head; current.next!=null; current=current.next){
+                for(idx=current.next; idx!=null; idx=idx.next){
+                    if(current.data<idx.data){
+                        tmp=current.data;
+                        current.data=idx.data;
+                        idx.data=tmp;
+                    }
+                }
+            }
+        }
+        print();
     }
 }

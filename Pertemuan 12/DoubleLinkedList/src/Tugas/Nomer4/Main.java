@@ -98,7 +98,10 @@ public class Main {
                     break;
                 }
                 case 8:{
-                
+                    System.out.println("Cari Data");
+                    System.out.print("Masukkan NIM yang dicari : ");
+                    String nim = sc1.nextLine();
+                    dll.search(nim);
                     break;    
                 }
                 case 9:{
